@@ -36,3 +36,138 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  font-family: sans-serif;
+  
+}
+.search-title {
+  text-align: center;
+  display: block;
+  margin-top: 10%;
+}
+.search-layout {
+  margin: auto;
+  width: 50%;
+  margin-top: 2%;
+
+}
+
+.search-input {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  width: 70%;
+}
+.search-submit {
+  width: 20%;
+  margin-left: 3%;
+}
+
+.no-suggestions {
+  color: #999;
+  padding: 0.5rem;
+}
+
+.suggestions {
+  border: 1px solid #999;
+  border-top-width: 0;
+  list-style: none;
+  margin-top: 0;
+  max-height: 143px;
+  overflow-y: auto;
+  padding-left: 0;
+  width: calc(70% + 1rem);
+}
+
+.suggestions li {
+  padding: 0.5rem;
+}
+
+.suggestion-active,
+.suggestions li:hover {
+  background-color: #f3efef;
+  color: #161614;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.suggestions li:not(:last-of-type) {
+  border-bottom: 1px solid #999;
+}
+/* Container */
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+/* Column */
+.column {
+  flex-basis: 33.3333333333%;
+  width: 33.3333333333%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+@media (max-width: 900px) {
+  .column {
+    flex-basis: 50%;
+    width: 50%;
+ }
+}
+@media (max-width: 600px) {
+  .column {
+    flex-basis: 100%;
+    width: 100%;
+ }
+}
+/* Article (Component) */
+.article {
+  background: #fff;
+  margin: 0 0 20px;
+  padding: 20px;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.article:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.article:active {
+  box-shadow: none;
+  transform-origin: center;
+  transform: scale(0.98);
+}
+.article__category {
+  display: inline-block;
+  padding: 5px;
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.075rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: 100%;                   /* IE6 needs any width */
+  overflow: hidden;              /* "overflow" value must be different from  visible"*/ 
+  -o-text-overflow: ellipsis;    /* Opera < 11*/
+  text-overflow:    ellipsis;    
+  background: black;
+}
+.article__excerpt {
+  color: #666;
+  line-height: 1.5rem;
+  font-size: 0.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.article__title {
+  margin: 0 0 10px;
+  color: #444;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+}
